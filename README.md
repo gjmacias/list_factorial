@@ -7,17 +7,16 @@ El objetivo de este proyecto es simple: crear una función que muestre todas las
 * [Como utilizamos la función?](#como-utilizamos-la-función)
 
 ### Que es list_factorial?
-list_factorial es un projecto de [42][1] donde creamos una función capaz de leer, linea por linea, un archivo cada vez que
-se llame a la funcion.
+list_factorial es un projecto donde una función muestra todas las posibilidades de un factorial.
 
 <b>El prototipo de la función debe ser la siguiente:</b>
 
 ```C
-char	*get_next_line(int fd)
+void factorial(int i);
 ```
 
 ### Que utilizamos?
-En nuestro get_next_line tenemos solo las siguentes funciones de librerias externas autorizadas:
+En nuestro list_factorial utilizamos:
 
 | Función  | Descripción														 			|
 |-------|-----------------------------------------------------------------------------------|
