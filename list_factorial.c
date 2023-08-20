@@ -117,7 +117,7 @@ void	factorial(int n)
 	printf("proves: %d\n", proves);
 	free(i);
 }
-
+/*
 int	main(int n, char *s[])
 {
 	int i;
@@ -131,3 +131,4 @@ int	main(int n, char *s[])
 		printf("parameters nop.");
 	return (0);
 }
+*/
