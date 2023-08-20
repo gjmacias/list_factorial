@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <limits.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "list_factorial.h"
 
 void	print( int *s, int n)
 {
