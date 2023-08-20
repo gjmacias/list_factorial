@@ -1,23 +1,78 @@
-# list_factorial
+# list_factorial - gmacias-
+El objetivo de este proyecto es simple: crear una función que muestre todas las posibilidades de un factorial.
+### Indice
+* [Que es list_factorial?](#que-es-list_factorial)
+* [Que utilizamos?](#que-utilizamos)
+* [Como funciona?](#como-funciona)
+* [Como utilizamos la función?](#como-utilizamos-la-función)
 
-His unic function is to list you a list of all combunatuions posibles (!n)
+### Que es list_factorial?
+list_factorial es un projecto de [42][1] donde creamos una función capaz de leer, linea por linea, un archivo cada vez que
+se llame a la funcion.
+
+<b>El prototipo de la función debe ser la siguiente:</b>
+
+```C
+char	*get_next_line(int fd)
+```
+
+### Que utilizamos?
+En nuestro get_next_line tenemos solo las siguentes funciones de librerias externas autorizadas:
+
+| Función  | Descripción														 			|
+|-------|-----------------------------------------------------------------------------------|
+| malloc | Solicitar un bloque de memoria del tamaño suministrado como parámetro.     													|
+| free | Desasigna un bloque de memoria que se había asignado previamente mediante una llamada. 											|
+| read |  Lee el contenido del archivo del sistema seleccionado.               									|
 
 
-ej: ./listFactorial 3
+### Como funciona?
 
-output:
+como he comentado a esta función le envias el file descriptor para leer linea por linea, por ejemplo, si tenemos un archivo
+llamado `textoprueba.txt` y tengo el siguiente contenido:  
 
-1 2 3\n
+	linea1  
+ 	linea2  
+  	linea3
 
-1 3 2\n
+Cada vez que llamemos a la función (utilizando el **F**ile**D**escriptor de `textoprueba.txt`)imprimirá una linea:
+```C
+printf(%s,get_next_line(int fd);
+printf(%s,get_next_line(int fd);
+printf(%s,get_next_line(int fd);
+printf(%s,get_next_line(int fd);
+```
+Output:
 
-2 1 3\n
+	linea1  //lee la primera linea
+	linea2  //lee la segunda linea
+	linea3  //lee la tercera linea
+	(null)  //devuelve NULL por que ha llegado al final del archivo (EOF)
 
-2 3 1\n
+### Como utilizamos la función?
 
-3 1 2\n
+Para utilizarlo primero debes saber la ruta de la funcion y utilizar el archivo .h de esta función. Luego añadirlo en el
+encabezado de tu programa:
 
-3 2 1\n
+```C
+#include "./<carpeta_de_get_next_line>/get_next_line.h"
+```
 
+y eso ya estaría listo para usar!
 
-it sholud you put the result in: output.exe (under construction)
+# Quizás pueda interesarte!
+
+### - Para ver mi progresion en 42 🌠
+[AQUÍ](https://github.com/gjmacias/42BCN)
+
+### - Mi perfil de 42 👾
+[AQUÍ](https://profile.intra.42.fr/users/gmacias-)
+
+### - Mis proyectos personales 🧐
+[AQUÍ🗒️](https://github.com/gjmacias/autoproyectos)
+
+# Contacto 📥
+
+◦ Email: gmacias-@student.42barcelona.com
+
+[1]: https://www.42barcelona.com/ "42 BCN"
