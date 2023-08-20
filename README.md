@@ -12,7 +12,7 @@ list_factorial es un projecto donde una función muestra todas las posibilidades
 <b>El prototipo de la función debe ser la siguiente:</b>
 
 ```C
-void factorial(int i);
+void factorial(int n);
 ```
 
 ### Que utilizamos?
@@ -22,31 +22,32 @@ En nuestro list_factorial utilizamos:
 |-------|-----------------------------------------------------------------------------------|
 | malloc | Solicitar un bloque de memoria del tamaño suministrado como parámetro.     													|
 | free | Desasigna un bloque de memoria que se había asignado previamente mediante una llamada. 											|
-| read |  Lee el contenido del archivo del sistema seleccionado.               									|
+| print |  mostrar por pantalla el resultado               									|
 
 
 ### Como funciona?
 
-como he comentado a esta función le envias el file descriptor para leer linea por linea, por ejemplo, si tenemos un archivo
-llamado `textoprueba.txt` y tengo el siguiente contenido:  
+A la función le mandaremos el numero el cual querremos que nos de la lista:  
 
-	linea1  
- 	linea2  
-  	linea3
+	3!  ->	6 posibilidades
 
-Cada vez que llamemos a la función (utilizando el **F**ile**D**escriptor de `textoprueba.txt`)imprimirá una linea:
+Cada vez que llamemos a la función imprimirá la lista completa y **ordenada**, aqui el ejemplo:
 ```C
-printf(%s,get_next_line(int fd);
-printf(%s,get_next_line(int fd);
-printf(%s,get_next_line(int fd);
-printf(%s,get_next_line(int fd);
+...
+factorial(3);
+...
 ```
 Output:
 
-	linea1  //lee la primera linea
-	linea2  //lee la segunda linea
-	linea3  //lee la tercera linea
-	(null)  //devuelve NULL por que ha llegado al final del archivo (EOF)
+	1, 2, 3,  
+ 	1, 3, 2,  
+  	2, 3, 1,  
+ 	2, 1, 3,  
+  	3, 1, 2,  
+ 	3, 2, 1,  
+  	proves: 6
+
+El resultado mostrará la lista y todas las posibilades impresas.
 
 ### Como utilizamos la función?
 
@@ -54,7 +55,7 @@ Para utilizarlo primero debes saber la ruta de la funcion y utilizar el archivo 
 encabezado de tu programa:
 
 ```C
-#include "./<carpeta_de_get_next_line>/get_next_line.h"
+#include "./<carpeta_de_list_factorial>/list_factorial.h"
 ```
 
 y eso ya estaría listo para usar!
