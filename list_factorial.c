@@ -9,7 +9,7 @@ void	print( int *s, int n)
 	{
 		printf("%d", s[i++]);
 		if (s[i])
-			prinf(", ");
+			printf(", ");
 	}
 	printf("\n");
 }
