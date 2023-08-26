@@ -6,7 +6,11 @@ void	print( int *s, int n)
 
 	i = 0;
 	while (i < n)
-		printf("%d, ", s[i++]);
+	{
+		printf("%d", s[i++]);
+		if (s[i])
+			prinf(", ");
+	}
 	printf("\n");
 }
 
